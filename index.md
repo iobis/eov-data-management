@@ -113,7 +113,7 @@ The OBIS Manual, OBIS Nodes, or the OBIS helpdesk ([helpdesk@obis.org](mailto:he
 
 ![](images/OBIS-nodes-map.png)
 
-### 3b. Connect Existing Data Portals with OBIS
+## 3b. Connect Existing Data Portals with OBIS
 
 Your institution may already have a data portal or repository where datasets are published. If so, these existing portals can be connected to OBIS. However, for this to happen, the **data must be structured according to the Darwin Core standard**. As mentioned, OBIS currently harvests data from a software called **Integrated Publishing Toolkits (IPTs)**. To integrate your data, you may need to establish a workflow that:
 
@@ -158,6 +158,8 @@ To verify that your (meta)data are Findable (the F of FAIR), check that the name
 
 * Documentation [https://iobis.github.io/bioeco-docs/](https://iobis.github.io/bioeco-docs/)  
 * Access [https://bioeco.goosocean.org/](https://bioeco.goosocean.org/)
+
+---
 
 [^1]:  Wilkinson et al. 2016 https://doi.org/10.1038/sdata.2016.18
 

@@ -1,0 +1,6 @@
+title: "EOV Data Management"
+description: "Guidelines for managing EOV data"
+theme: minima
+heading_anchors: true
+markdown: kramdown
+remote_theme: just-the-docs/just-the-docs

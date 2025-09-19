@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <div class="logo-container">
+            <img src="images/goos-logo-new.png" alt="BioEcoOcean Logo" height="50px">
+            <img src="images/iode-unesco.png" alt="BioEcoOcean Logo" height="50px">
+            <img src="images/OBIS_logo.png" alt="BioEcoOcean Logo" height="50px"> 
+        </div>
+</head>
+
+<body>
+    <header>
+  <nav>
+    <div class="navbar"><h1 style="color: aliceblue; padding: 0 10px;">{{ site.title }}</h1></div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="navbar-menu">
+        <ul>
+            <li><h3><a href="https://goosocean.org/eov/" style="color: aliceblue;" target="_blank">GOOS EOV Specification Sheets</a></h3></li>
+        </ul>
+    </div>
+</nav>
+<script>
+    function toggleMenu() {
+        const navMenu = document.querySelector(".navbar-menu");
+        navMenu.classList.toggle("show");
+    }
+</script>
+    </header>
+
+    <div class="content">
+        {% capture md %}
+            {% include_relative index.md %}
+        {% endcapture %}
+        {{ md | markdownify }}
+    </div>
+</body>
+</html>

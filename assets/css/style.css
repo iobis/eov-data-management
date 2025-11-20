@@ -134,6 +134,45 @@ nav .navbar {
     background-color: white;
     margin: 3px 0;
 }
+.footer {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+.footer, .footer p, .footer a {
+    color: white;
+}
+.footer-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 95%;
+}
+.footer-col {
+    flex: 1 1 0;
+    padding: 0 10px;
+    min-width: 0;
+    text-align: left;
+    word-break: break-word;
+}
+.footer-col:nth-child(1) {
+    flex: 0 0 10%;   /* First column: about 10% width */
+    max-width: 10%;
+}
+.footer-col:nth-child(2) {
+    flex: 0 0 30%;  
+    max-width: 30%;
+}
+.footer-col:nth-child(3) {
+    flex: 0 0 60%;   
+    max-width: 60%;
+}
 @media (max-width: 768px) {
     .logo-container img {
         max-width: 20%; /* Shrink further on smaller screens */

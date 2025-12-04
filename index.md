@@ -143,6 +143,7 @@ To verify that your (meta)data are Findable (the F of FAIR), check that the name
 ## Help Resources
 
 * EOV Metadata Submission tool: [https://eovmetadata.obis.org/](https://eovmetadata.obis.org/)
+* Ocean Best Practices System – Search for best practices: [https://search.oceanbestpractices.org/](https://search.oceanbestpractices.org/)
 
 **ODIS**
 

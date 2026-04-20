@@ -1,3 +1,8 @@
+---
+layout: default
+title: "EOV Data Management"
+toc: true
+---
 
 # Data and Information Management for EOVs
 
@@ -6,7 +11,7 @@ The GOOS approach to data management is aligned with open data and FAIR (Findabl
 **Please follow these practices carefully, as EOV data FAIRness relies on compliance with the guidelines below.[^2]**
 
 <div class="callout-box" id="what-is-metadata">
-<h2>Glossary</h2>
+<h2 id="glossary">Glossary</h2>
 
 <b>Metadata:</b> data or information that describes data. It's information that helps others find, understand, and properly use data - i.e. the "Who, What, When, and Where". In the context of EOV monitoring, this can refer to the information about a monitoring effort (e.g. programme, project, institution, etc.) or about the data produced from that monitoring effort.
 <br><br>
@@ -51,7 +56,7 @@ Not all steps may be relevant for you, but <b>being discoverable (Step 1+2) is t
 
 *Figure 1\. High-level example of data and metadata flows to ensure A) EOV data producers and B) EOV datasets become visible in the IOC Digital Ecosystem. Note the links between OBIS, GOOS BioEco Portal, and ODIS \- data visible in the former* two *will be visible in ODIS.*
 
-## 1\. Confirm Discoverability
+<h2 id="1-confirm-discoverability">1. Confirm Discoverability</h2>
 
 Before initiating data flow, you must ensure that key metadata about the EOV data producer (i.e. the project, programme, or organisation) is up to date, verifiable, and FAIR within the IOC-UNESCO digital ecosystem. Follow these steps:
 
@@ -69,11 +74,11 @@ Before initiating data flow, you must ensure that key metadata about the EOV dat
 
 4. **Already hosting a data portal?**: If you or your organisation hosts an independent data portal or uses an existing repository[^6] for EOV data, check whether it's already connected to ODIS. If it isn't, ask the repository admin to contact [info@odis.org](mailto:info@odis.org).
 
-## 2\. Become Discoverable: Prepare Data Producer Metadata
+<h2 id="2-become-discoverable-prepare-data-producer-metadata">2. Become Discoverable: Prepare Data Producer Metadata</h2>
 
 Detailed metadata about the data producer is essential to help others find and understand the EOV monitoring work being done around the world, assess its relevance, credit the right people, and identify collaboration opportunities. The GOOS BioEco Portal uses this information to map who is monitoring which EOVs and where, and is being developed to also display EOV datasets published to OBIS.
 
-### Minimum required metadata
+<h3 id="minimum-required-metadata">Minimum required metadata</h3>
 
 | Field | Description |
 | :----- | :----------- |
@@ -86,7 +91,7 @@ Detailed metadata about the data producer is essential to help others find and u
 | Geographic location | The general location where monitoring takes place (e.g. bounding box, point location) |
 | Sampling approach | The general methodological approach used, ideally mapped to GOOS Platform types (e.g. [platform family](https://www.ocean-ops.org/api/help/?param=platformfamily)) |
 
-### How to Submit
+<h3 id="how-to-submit">How to Submit</h3>
 
 Use the [EOV Metadata Application](https://eovmetadata.obis.org/) — it walks you through the required fields, generates the necessary JSON-LD file, and submissions become visible directly in ODIS and the BioEco Portal. No technical knowledge is required but a GitHub account is required to use the tool.
 
@@ -96,7 +101,7 @@ Use the [EOV Metadata Application](https://eovmetadata.obis.org/) — it walks y
 
 **Dataset metadata** (as opposed to data producer metadata) should be submitted directly to the repository where the data is hosted (e.g. OBIS). Dataset metadata may include but is not limited to information about the taxonomic coverage, temporal and geographic area, sampling methods used, people involved, and the project producing the data (including identifiers to link the dataset with the data producer).  
 
-## 3\. Prepare and Publish EOV Data
+<h2 id="3-prepare-and-publish-eov-data">3. Prepare and Publish EOV Data</h2>
 
 We encourage the “Publish once harvest many times” principle: publish your data to one trusted repository, and it will flow automatically to connected systems. Where you publish depends on your data type, but the repository must be interoperable with the data systems used by GOOS, IODE, and other IOC entities.
 
@@ -108,7 +113,7 @@ You have three main options:
   <li><a href="#3c-publish-non-bioeco-data">Publish non-BioEco data</a></li>
 </ol>
 
-### 3a. Publish BioEco Data to OBIS
+<h3 id="3a-publish-bioeco-data-to-obis">3a. Publish BioEco Data to OBIS</h3>
 
 OBIS (Ocean Biodiversity Information System) is the recommended repository for all observation-based BioEco datasets, including those derived from field samples, acoustic surveys, and DNA sequencing.
 
@@ -145,7 +150,7 @@ Raw supporting data (e.g. images, DNA sequences) should be deposited in an appro
 
 To **link a dataset back to its data producer**, enter the project information - including the **producer's identifier** - in the relevant section of the IPT metadata form. We strongly recommend doing this to maintain clear connections between datasets and the programmes that produced them. You can always go back and add an identifier if you do not have one at the time of dataset publication.
 
-#### How Darwin Core structures data
+<h4 id="how-darwin-core-structures-data">How Darwin Core structures data</h4>
 
 DwC organises data into linked tables. Tables are connected by shared identifiers (eventIDs and occurrenceIDs), so data from different tables can be reliably combined. See Figure 2 for an example.
 
@@ -160,7 +165,7 @@ The tables currently implemented by OBIS are:
 
 *Figure 2\. A simplified example of the Darwin Core structure, demonstrating how data in Sampling-Event, Occurrence, and extendedMeasurementOrFact (eMoF) tables can be linked by eventIDs and occurrenceIDs. Note the example does not show all required fields.*
 
-#### Getting help with OBIS
+<h4 id="getting-help-with-obis">Getting help with OBIS</h4>
 
 The OBIS Manual, OBIS Nodes, or the OBIS helpdesk ([helpdesk@obis.org](mailto:helpdesk@obis.org)) can assist with formatting and publishing. OBIS Nodes can assist data providers with data formatting. You may provide them with your dataset and associated metadata in any format (e.g. Excel spreadsheets) and they can assist in transforming it to Darwin Core. We recommend identifying a regional or thematic Node to help you (Figure 3). If your dataset is incomplete or historical, don't be discouraged - OBIS Nodes can also help assess what's usable and how to handle gaps. For historical data, the [Oceans Past Initiative](https://oceanspast.org/) is a thematic OBIS Node that specifically handles historical marine data.
 
@@ -168,11 +173,11 @@ The [EOV Metadata Submission Tool](https://eovmetadata.obis.org/home) is also un
 
 ![Map of the OBIS Nodes](images/OBIS-nodes-map.png)
 
-#### Data licensing
+<h4 id="data-licensing">Data licensing</h4>
 
 All data published to OBIS is open-access. However datasets may select one of three Creative Commons licenses: **CC0, CC BY, CC BY-NC**. For details on the data policy of OBIS, see the [OBIS website](https://obis.org/data/datapolicy/) and the [OBIS Manual](https://manual.obis.org/policy.html).
 
-### 3b. Connect Existing Data Portals with OBIS
+<h3 id="3b-connect-existing-data-portals-with-obis">3b. Connect Existing Data Portals with OBIS</h3>
 
 If your institution already publishes data through its own portal or repository, it may be possible to connect that system to OBIS.  To do this, the **data must be structured in Darwin Core format,** and the portal needs to be connected to an Integrated Publishing Toolkit (IPT) - the software OBIS uses to harvest data.
 
@@ -194,7 +199,7 @@ EMODnet Biology is managed through EurOBIS, a regional OBIS node - which means t
 For EMODnet Physics and Chemistry data not covered by the above, a direct connection to OBIS does not currently exist. At minimum, ensure your data producer is registered in ODIS (see Section 1) so your work remains findable.
 </div>
 
-### 3c. Publish Non-BioEco Data
+<h3 id="3c-publish-non-bioeco-data">3c. Publish Non-BioEco Data</h3>
 
 Non biological data collected must also be made FAIR. As a reminder, we encourage any non-BioEco data that was taken at the same time as BioEco data to be published together in OBIS. To do this, you can utilise the ExtendedMeasurementOrFact table. Using this approach will avoid datasets being split into several separate datasets, which are then difficult to combine again. Ensure identifiers for the associated projects, people, institutions, etc. are included in all metadata so they can be connected. Specific details on using this table are outlined in the [OBIS Manual](https://manual.obis.org/format_emof.html).
 
@@ -202,13 +207,13 @@ For guidance on data flows for physical or biochemical data not collected alongs
 
 Metadata about observing platforms should be made available through the GOOS [OceanOPS](https://www.ocean-ops.org/). See [https://www.ocean-ops.org/metadata/](https://www.ocean-ops.org/metadata/#background) for guidance.
 
-## 4\. Verify Discoverability
+<h2 id="4-verify-discoverability">4. Verify Discoverability</h2>
 
 To verify that your (meta)data are Findable (the F of FAIR), check that the name of your entry appears in the [ODIS Dashboard](http://dashboard.odis.org/) and/or the [GOOS BioEco Portal](https://bioeco.goosocean.org/).
 
 To verify that BioEco datasets published to OBIS are accessible (the A of FAIR), search by dataset name through the OBIS Mapper ([https://mapper.obis.org/](https://mapper.obis.org/)) or the Homepage portal ([https://obis.org/search?entity=dataset](https://obis.org/search?entity=dataset)). The GOOS BioEco Portal harvests data producer metadata directly from ODIS and from the EOV Metadata App, and populates it into the Portal. This connection is currently a work in progress, but will streamline the metadata sharing process.
 
-## Help Resources
+<h2 id="help-resources">Help Resources</h2>
 
 * EOV Metadata Submission tool: [https://eovmetadata.obis.org/](https://eovmetadata.obis.org/)
 * Ocean Best Practices System – Search for best practices: [https://search.oceanbestpractices.org/](https://search.oceanbestpractices.org/)

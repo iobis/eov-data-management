@@ -4,3 +4,17 @@ theme: minima
 heading_anchors: true
 markdown: kramdown
 remote_theme: just-the-docs/just-the-docs
+
+gems:
+  - jekyll-toc
+
+toc:
+  min_level: 2
+  max_level: 3
+  ordered_list: false
+  no_toc_section_class: no_toc_section
+  list_class: section-nav
+  sublist_class: ''
+  item_class: toc-entry
+  item_prefix: toc-
+  

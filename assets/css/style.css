@@ -10,14 +10,13 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    max-width: 800px;
-    margin: auto;
     background-color: var(--primary-color);
-    max-width: 100%;
     font-size: large;
+    margin: 0;
+    padding: 0;
 }
 .content{
-    max-width: 80%;
+    max-width: 70%;
     margin: 0 auto;
     padding: 3%;
     background: #ffffff;
@@ -258,18 +257,24 @@ nav .navbar {
 }
 
 /* Floating Table of Contents */
+
+#toc-menu {
+    position: fixed;
+    left: 20px;
+    width: 200px;
+    max-height: calc(100vh - 120px);
+    z-index: 100;
+}
+
 .section-nav {
-  position: fixed;
-  top: 100px;
-  right: 20px;
-  width: 250px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  padding: 15px;
-  font-size: 14px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
 }
 
 .section-nav a {
@@ -294,15 +299,56 @@ main {
   margin-right: 300px;
 }
 
-/* Responsive: hide floating TOC on small screens */
-@media (max-width: 1200px) {
-  .section-nav {
-    position: static;
-    width: 100%;
-    margin-bottom: 20px;
+
+
+/* Mobile: Show hamburger button for TOC */
+@media (max-width: 1500px) {
+  .toc-hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: var(--tertiary-color);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    margin: 10px;
   }
   
-  main {
-    margin-right: 0;
+  .toc-hamburger span {
+    width: 24px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+  
+  #toc-menu {
+    position: fixed;
+    left: -300px;
+    width: 280px;
+    max-height: calc(100vh - 100px);
+    z-index: 400;
+    transition: left 0.3s ease;
+    margin-top: 50px;
+  }
+  
+  #toc-menu.open {
+    left: 10px;
+  }
+  
+  .section-nav {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content {
+    margin: 40px auto 40px auto;
   }
 }

@@ -36,13 +36,23 @@ layout: default
     }
 </script>
     </header>
-
-    <div class="content">
-        {% capture md %}
-            {% include_relative index.md %}
-        {% endcapture %}
-        {{ md | markdownify }}
+    <div class="toc-hamburger" onclick="toggleToc()" id="toc-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+    <div id="toc-menu">
+      {% toc %}
+    </div>
+    <div class="content">
+      {{ content }}
+    </div>
+<script>
+    function toggleToc() {
+        const tocMenu = document.getElementById("toc-menu");
+        tocMenu.classList.toggle("open");
+    }
+</script>
 </body>
 <footer>
     <div class="footer-flex">

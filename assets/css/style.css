@@ -1,10 +1,20 @@
+:root {
+    --primary-color: #1f4797;
+    --secondary-color: #0b2f94;
+    --tertiary-color: #002366;
+    --accent-color: #0077cc;
+    --background-color: #1f4797;
+    --text-color: #333;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     max-width: 800px;
     margin: auto;
-    background-color: #1f4797;
+    background-color: var(--primary-color);
     max-width: 100%;
+    font-size: large;
 }
 .content{
     max-width: 80%;
@@ -13,10 +23,10 @@ body {
     background: #ffffff;
 }
 h1, h2, h3 {
-    color: #0b2f94;
+    color: var(--secondary-color);
 }
 a {
-    color: #0077cc;
+    color: var(--accent-color);
     text-decoration: none;
 }
 a:hover {
@@ -30,6 +40,18 @@ img {
 }
 ul, ol {
     margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+thead {
+    background-color: var(--tertiary-color);
+    color: white;
+}
+tbody{
+    background-color: #edf2fd;
 }
 .sidebar {
     position: fixed;
@@ -77,7 +99,7 @@ ul, ol {
     object-fit: contain; /* Ensure logos scale without distortion */
 }
 nav {
-  background-color: #002366;
+  background-color: var(--tertiary-color);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -217,4 +239,70 @@ nav .navbar {
         text-align: center;
         padding: 10px 0;
     }
+}
+
+/* Bordered box for emphasis */
+.bordered-box {
+    border: 2px solid #0b2f94;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+}
+.callout-box {
+    border: 2px solid #e9cc41;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #fff0aa;
+    border-radius: 5px;
+}
+
+/* Floating Table of Contents */
+.section-nav {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 250px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.section-nav a {
+  display: block;
+  padding: 5px 0;
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.section-nav a:hover {
+  text-decoration: underline;
+}
+
+.section-nav ul {
+  list-style: none;
+  padding-left: 16px;
+  margin: 5px 0;
+}
+
+/* Adjust main content for fixed TOC */
+main {
+  margin-right: 300px;
+}
+
+/* Responsive: hide floating TOC on small screens */
+@media (max-width: 1200px) {
+  .section-nav {
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  main {
+    margin-right: 0;
+  }
 }

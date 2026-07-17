@@ -21,7 +21,7 @@ body {
     padding: 3%;
     background: #ffffff;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: var(--secondary-color);
 }
 a {
@@ -240,6 +240,18 @@ nav .navbar {
     }
 }
 
+blockquote {
+    background-color: #f2f2f2;
+    border-left: 4px solid #ccc;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--text-color);
+}
+blockquote p {
+    margin: 0;
+}
+
 /* Bordered box for emphasis */
 .bordered-box {
     border: 2px solid #0b2f94;
@@ -254,6 +266,32 @@ nav .navbar {
     margin: 20px 0;
     background-color: #fff0aa;
     border-radius: 5px;
+}
+
+/* Collapsible boxes: add the box's class to a <details> element instead of a <div> */
+.callout-box summary,
+.bordered-box summary {
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+}
+.callout-box summary::-webkit-details-marker,
+.bordered-box summary::-webkit-details-marker {
+    display: none;
+}
+.callout-box summary::before,
+.bordered-box summary::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.2s ease;
+}
+.callout-box[open] summary::before,
+.bordered-box[open] summary::before {
+    transform: rotate(90deg);
+}
+.callout-box summary h2, .callout-box summary h3, .callout-box summary h4, .bordered-box summary h2, .bordered-box summary h3, .bordered-box summary h4 {
+    display: inline;
 }
 
 /* Floating Table of Contents */

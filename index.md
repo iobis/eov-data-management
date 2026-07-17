@@ -103,6 +103,7 @@ There are three main scenarios for BioEco observational data:
 OBIS (Ocean Biodiversity Information System) can host observation-based datasets such as those derived from field samples, acoustic surveys, satellite imaging, animal tracking, DNA sequencing, etc. (Figure 2).
 
 ![Diagram showing what kind of data OBIS can host](images/Datatypes-DataTables-arrows.png)
+
 *Figure 2\. Diagram indiciating what kind of observational data can be published to OBIS. Arrows indicate which Darwin Core table particular information can be stored in.*
 
 <details class="bordered-box" id="what-is-metadata">
@@ -166,6 +167,7 @@ The [OBIS Manual](https://manual.obis.org/), [OBIS Nodes,](https://obis.org/abou
 The [EOV Metadata Application](https://eovmetadata.obis.org/home) is also under development to offer the option of uploading a file aligned to a user-friendly "EOV-format", and guide you through the process of converting your data into DwC tables.
 
 ![Map of the OBIS Nodes](images/OBIS-nodes-map.png)
+
 *Figure 4\. Map of OBIS Node Network*
 
 <h4 id="data-licensing">Data licensing</h4>

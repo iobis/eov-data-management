@@ -1,5 +1,6 @@
 title: "EOV Data Management"
 description: "Guidelines for managing EOV data"
+baseurl: "/eov-data-management"
 theme: minima
 heading_anchors: true
 markdown: kramdown

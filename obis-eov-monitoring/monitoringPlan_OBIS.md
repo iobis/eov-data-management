@@ -1,4 +1,6 @@
-# DRAFT: EOV Monitoring Plan for OBIS
+# EOV Monitoring Plan for OBIS
+
+_OBIS DCG 2026 deliverable D5.4: Design and document an approach, implementation plan, and timeline to quantify and monitor EOV data within OBIS._
 
 **Authors**: Elizabeth Lawrence, Ward Appeltans, Laura Brenskelle, Takashi Hosono, Rubén Pérez-Pérez, Pieter Provoost, Katherine Tattersall, Anton Van de Putte
 

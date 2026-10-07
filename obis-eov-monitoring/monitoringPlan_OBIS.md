@@ -1,12 +1,12 @@
 # DRAFT: EOV Monitoring Plan for OBIS
 
-**Authors**: Elizabeth Lawrence, Laura Brenskelle, Takashi Hosono, Rubén Pérez-Pérez, Pieter Provoost, Katherine Tattersall, Anton Van de Putte
+**Authors**: Elizabeth Lawrence, Ward Appeltans, Laura Brenskelle, Takashi Hosono, Rubén Pérez-Pérez, Pieter Provoost, Katherine Tattersall, Anton Van de Putte
 
 ## Background
 
 OBIS plays a central role in aggregating marine biodiversity data and supports the Global Ocean Observing System (GOOS). To aggregate, quantify, and monitor relevant data in OBIS, it must first be made explicitly identifiable. The primary objective of this deliverable is to design a systematic approach for tagging, quantifying, and monitoring data relevant to the GOOS Essential Ocean Variables (EOVs) within OBIS, in support of OBIS Nodes (IODE NODCs and ADUs) and the GOOS BioEco community.
 
-By tagging data in this way, OBIS can enable downstream use and facilitate development of EOV monitoring data products, directly supporting OBIS Objective I (Build a sustainable global marine biodiversity data infrastructure) and III (Delivering operational biodiversity data services).
+By tagging data in this way, OBIS can enable downstream use and facilitate development of EOV monitoring data products, directly supporting OBIS Strategic Objective I (Build a sustainable global marine biodiversity data infrastructure) and III (Delivering operational biodiversity data services).
 
 ## Approach
 
@@ -32,7 +32,7 @@ We have identified three possible tagging categories to be considered:
 
 * **Collected for EOV monitoring** (explicitly aligned with GOOS objectives)  
 * **Contributing to EOV (ad hoc)** (retrospective alignment - identified by the OBIS pipeline logic)
-* **Manually identified by a third party** (e.g. by OBIS Nodes, NODCs, ADUs, etc.)
+* **Manually identified by a third party** (e.g. by OBIS Nodes, NODCs, ADUs, GOOS endorsed network or programme, etc.)
 
 Implementing the distinction between these categories will be defined at a later phase as they require different tag types, and we acknowledge that it would be beneficial to distinguish between datasets identified programmatically or manually, compared to datasets that considered EOV sampling approaches from the beginning.
 
